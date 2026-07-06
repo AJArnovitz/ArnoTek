@@ -15,6 +15,45 @@
 //                                                                                          *
 //      NOTE: This code will properly handle rollover of the Arduino time value.            *
 //                                                                                          *
+//------------------------------------------------------------------------------------------*
+//                                                                                          *
+// How to use this code:                                                                    *
+//     1. Copy this code to your Arduino library                                            *
+//     2. Add "#include <ArnoTek_HeartBeat.h>" to your source code                          *
+//     3. Define heartbeat object before the setup routine                                  *
+//     4. Call the "Init" method of the heartbeat object in the setup routine to set the    *
+//        heartbeat pin and the time between heartbeats                                     *
+//     5. Call the "Toggle" method of the heartbeat object in the loop routine to toggle    * 
+//        the heartbeat                                                                     *
+//                                                                                          *
+// Example:                                                                                 *
+//    #include <ArnoTek_HeartBeat.h>                                                        *
+//        .                                                                                 *
+//        .                                                                                 *
+//        .                                                                                 *
+//    const int HeartBeatPin   = 13;                                                        *
+//    const int HeartBeatDelay = 500;    // Define delay value in milliseconds              *
+//    ArnoTek_HeartBeat HeartBeat;       // Define heartbeat object                         *
+//                                                                                          *
+//        .                                                                                 *
+//        .                                                                                 *
+//        .                                                                                 *
+//    void setup()                                                                          *
+//    {                                                                                     *
+//       HeartBeat.Init(HeartBeatDelay, HeartBeatPin);   // Initialize the heartbeat object *
+//           .                                                                              *
+//           .                                                                              *
+//           .                                                                              *
+//    }                                                                                     *
+//                                                                                          *
+//    void loop()                                                                           *
+//    {                                                                                     *
+//       HeartBeat.Toggle();     // Toggle the heartbeat LED (if it is time)                *
+//           .                                                                              *
+//           .                                                                              *
+//           .                                                                              *
+//    }                                                                                     *
+//                                                                                          *
 //*******************************************************************************************
 
 #ifndef ArnoTekHeartBeat_h
