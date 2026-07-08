@@ -1,2 +1,4 @@
 # ArnoTek
-Software for Windows and microcontrollers
+
+Software for Windows and Arduino microcontrollers
+
